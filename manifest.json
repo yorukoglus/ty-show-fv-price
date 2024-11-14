@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Favorited Price Fetcher",
+  "version": "1.0",
+  "description": "Trendyol favori fiyat bilgisini network isteğinden çekerek sayfada gösterir.",
+  "permissions": ["webRequest", "activeTab", "scripting"],
+  "host_permissions": ["https://*/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
